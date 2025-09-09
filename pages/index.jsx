@@ -11,13 +11,14 @@ const Home = () => {
     <div className="bg-primary/60 h-full">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto relative">
-          
-          {/* Mobile avatar */}
-          <div className="xl:hidden mb-6 flex justify-center">
-            <div className="w-36 h-36">
-              <Avatar />
-            </div>
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+          {/* Mobile small avatar */}
+          <div className="block xl:hidden mx-auto mb-4 w-20 h-20 rounded-full overflow-hidden border-2 border-accent">
+            <img
+              src="/azmain-mobile.png"
+              alt="Azmain Iqtidar Arnob"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* title */}
@@ -26,10 +27,12 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-[2.5rem] xl:text-[3rem] 2xl:text-[3.5rem]"
+            className="h1"
           >
             Hi, I'm <br />
-            <span className="text-accent">Azmain Iqtidar Arnob</span>
+            <span className="text-accent text-[2.5rem] xl:text-[4rem]">
+              Azmain Iqtidar Arnob
+            </span>
           </motion.h1>
 
           {/* subtitle */}
@@ -41,8 +44,9 @@ const Home = () => {
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
             Final-year Computer Science student at North South University,
-            passionate about <strong>Machine Learning</strong> and <strong>AI</strong>.
-            Exploring innovative solutions in <strong>ML, AI & Smart Systems</strong>.
+            passionate about <strong>Machine Learning</strong> and{" "}
+            <strong>AI</strong>. Exploring innovative solutions in{" "}
+            <strong>ML, AI & Smart Systems</strong>.
           </motion.p>
 
           {/* btn */}
@@ -61,8 +65,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* image & desktop avatar */}
-      <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none">
+      {/* image */}
+      <div className="w-[1280px] h-full absolute right-0 bottom-0">
         {/* bg img */}
         <div
           role="img"
@@ -73,14 +77,14 @@ const Home = () => {
         {/* particles */}
         <ParticlesContainer />
 
-        {/* Desktop avatar */}
+        {/* desktop avatar */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="hidden xl:block w-full max-w-[600px] h-full absolute -bottom-20 lg:bottom-0 lg:right-[5%] 2xl:right-[8%]"
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] hidden xl:flex"
         >
           <Avatar />
         </motion.div>
@@ -90,6 +94,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
