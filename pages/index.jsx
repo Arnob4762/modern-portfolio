@@ -11,19 +11,25 @@ const Home = () => {
     <div className="bg-primary/60 h-full">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto relative">
+          
+          {/* Mobile avatar */}
+          <div className="xl:hidden mb-6 flex justify-center">
+            <div className="w-36 h-36">
+              <Avatar />
+            </div>
+          </div>
+
           {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-[2.5rem] md:text-[3rem] xl:text-[4rem]"
+            className="h1 text-[2.5rem] xl:text-[3rem] 2xl:text-[3.5rem]"
           >
             Hi, I'm <br />
-            <span className="text-accent text-[2.8rem] md:text-[3.5rem] xl:text-[4.5rem]">
-              Azmain Iqtidar Arnob
-            </span>
+            <span className="text-accent">Azmain Iqtidar Arnob</span>
           </motion.h1>
 
           {/* subtitle */}
@@ -55,8 +61,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* image */}
-      <div className="w-[1280px] h-full absolute right-0 bottom-0">
+      {/* image & desktop avatar */}
+      <div className="absolute bottom-0 right-0 w-full h-full pointer-events-none">
         {/* bg img */}
         <div
           role="img"
@@ -67,14 +73,14 @@ const Home = () => {
         {/* particles */}
         <ParticlesContainer />
 
-        {/* avatar */}
+        {/* Desktop avatar */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-48 md:-bottom-40 lg:bottom-0 lg:right-[8%]"
+          className="hidden xl:block w-full max-w-[600px] h-full absolute -bottom-20 lg:bottom-0 lg:right-[5%] 2xl:right-[8%]"
         >
           <Avatar />
         </motion.div>
@@ -84,6 +90,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
