@@ -13,9 +13,9 @@ const Home = () => {
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center xl:text-left flex flex-col justify-center xl:pt-40 h-full container mx-auto">
           
-          {/* circular avatar above name */}
-          <div className="flex justify-center xl:justify-start mb-4 xl:mb-6">
-            <div className="w-36 h-36 sm:w-40 sm:h-40 xl:w-44 xl:h-44 rounded-full overflow-hidden border-2 border-accent xl:-translate-x-6">
+          {/* circular avatar above text */}
+          <div className="flex justify-center mb-4 xl:mb-6">
+            <div className="w-36 h-36 sm:w-40 sm:h-40 xl:w-44 xl:h-44 rounded-full overflow-hidden border-2 border-accent">
               <img
                 src="/azmain-mobile.png"
                 alt="Azmain Iqtidar Arnob"
@@ -47,9 +47,7 @@ const Home = () => {
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
             Final-year Computer Science student at North South University,
-            passionate about <strong>Machine Learning</strong> and{" "}
-            <strong>AI</strong>. Exploring innovative solutions in{" "}
-            <strong>ML, AI & Smart Systems</strong>.
+            passionate about <strong>Machine Learning</strong> and <strong>AI</strong>. Exploring innovative solutions in <strong>ML, AI & Smart Systems</strong>.
           </motion.p>
 
           {/* Projects button (mobile only) */}
@@ -97,6 +95,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
