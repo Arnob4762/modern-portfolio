@@ -2,56 +2,63 @@ import { motion } from "framer-motion";
 
 import ParticlesContainer from "../components/ParticlesContainer";
 import Avatar from "../components/Avatar";
-
 import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
+    <div className="bg-primary/60 h-full relative">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-48 xl:text-left h-full container mx-auto relative">
-          
-          {/* circular avatar (mobile center, desktop left-aligned with text) */}
-          <div className="mx-auto xl:mx-0 xl:absolute xl:-left-40 mb-8 mt-10 w-32 h-32 sm:w-40 sm:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-accent">
-            <img
-              src="/azmain-mobile.png"
-              alt="Azmain Iqtidar Arnob"
-              className="w-full h-full object-cover"
-            />
+        <div className="flex flex-col justify-center xl:pt-40 h-full container mx-auto">
+          {/* centered text-wrapper (controls where avatar sits above text) */}
+          <div className="w-full max-w-xl mx-auto">
+            {/* circular image above the text block (centered with the wrapper) */}
+            <motion.div
+              variants={fadeIn("down", 0.2)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="mx-auto mb-6 mt-8 w-32 h-32 sm:w-40 sm:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-accent"
+            >
+              <img
+                src="/azmain-mobile.png"
+                alt="Azmain Iqtidar Arnob"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+
+            {/* title */}
+            <motion.h1
+              variants={fadeIn("down", 0.2)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="h1 text-center xl:text-left"
+            >
+              Hi, I'm <br />
+              <span className="text-accent text-[2rem] sm:text-[2.5rem] xl:text-[3rem]">
+                Azmain Iqtidar Arnob
+              </span>
+            </motion.h1>
+
+            {/* subtitle */}
+            <motion.p
+              variants={fadeIn("down", 0.3)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-center xl:text-left"
+            >
+              Final-year Computer Science student at North South University,
+              passionate about <strong>Machine Learning</strong> and{" "}
+              <strong>AI</strong>. Exploring innovative solutions in{" "}
+              <strong>ML, AI & Smart Systems</strong>.
+            </motion.p>
           </div>
-
-          {/* title */}
-          <motion.h1
-            variants={fadeIn("down", 0.2)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="h1 mt-4"
-          >
-            Hi, I'm <br />
-            <span className="text-accent text-[2rem] sm:text-[2.5rem] xl:text-[3rem]">
-              Azmain Iqtidar Arnob
-            </span>
-          </motion.h1>
-
-          {/* subtitle */}
-          <motion.p
-            variants={fadeIn("down", 0.3)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mt-4 mb-10 xl:mb-16"
-          >
-            Final-year Computer Science student at North South University,
-            passionate about <strong>Machine Learning</strong> and{" "}
-            <strong>AI</strong>. Exploring innovative solutions in{" "}
-            <strong>ML, AI & Smart Systems</strong>.
-          </motion.p>
         </div>
       </div>
 
-      {/* image */}
+      {/* background image, particles, and desktop side avatar */}
       <div className="w-[1280px] h-full absolute right-0 bottom-0">
         {/* bg img */}
         <div
@@ -63,7 +70,7 @@ const Home = () => {
         {/* particles */}
         <ParticlesContainer />
 
-        {/* desktop side avatar */}
+        {/* desktop side avatar (unchanged position/animation) */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
@@ -80,6 +87,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
