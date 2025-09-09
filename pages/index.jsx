@@ -10,9 +10,9 @@ const Home = () => {
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="flex flex-col justify-center xl:pt-40 h-full container mx-auto">
-          {/* centered text-wrapper (controls where avatar sits above text) */}
-          <div className="w-full max-w-xl mx-auto">
-            {/* circular image above the text block (centered with the wrapper) */}
+          {/* text-wrapper shifted left on laptop */}
+          <div className="w-full max-w-xl mx-auto xl:ml-12">
+            {/* circular image above the text block */}
             <motion.div
               variants={fadeIn("down", 0.2)}
               initial="hidden"
@@ -87,6 +87,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
