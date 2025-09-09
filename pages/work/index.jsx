@@ -20,7 +20,7 @@ const Work = () => {
               exit="hidden"
               className="h2 xl:mt-12"
             >
-              My work <span className="text-accent">.</span>
+              My Work <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -29,8 +29,11 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              A collection of my key academic and professional projects focusing
+              on Machine Learning, AI-driven applications, IoT-based systems,
+              and innovative web solutions. From real-time tourism chatbots to
+              medical image analysis, each project reflects practical
+              problem-solving and research-driven execution.
             </motion.p>
           </div>
 
@@ -52,3 +55,4 @@ const Work = () => {
 };
 
 export default Work;
+
