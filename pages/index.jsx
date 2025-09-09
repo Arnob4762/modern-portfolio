@@ -12,7 +12,7 @@ const Home = () => {
         <div className="flex flex-col justify-center xl:pt-40 h-full container mx-auto">
 
           {/* Text wrapper with circular photo */}
-          <div className="flex flex-col items-center xl:items-start text-center xl:text-left">
+          <div className="flex flex-col items-center xl:items-start text-center xl:text-left relative">
             {/* Circular photo (mobile + laptop) */}
             <motion.div
               variants={fadeIn("down", 0.2)}
@@ -20,6 +20,7 @@ const Home = () => {
               animate="show"
               exit="hidden"
               className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4"
+              style={{ left: "24px", position: "relative" }} // move 1.5 inch right
             >
               <img
                 src="/azmain-mobile.png"
@@ -56,7 +57,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* big Avatar (laptop only) + background */}
+      {/* Big Avatar (laptop only) */}
       <div className="w-[1280px] h-full absolute right-0 bottom-0 hidden xl:block">
         {/* big avatar */}
         <motion.div
@@ -85,6 +86,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
