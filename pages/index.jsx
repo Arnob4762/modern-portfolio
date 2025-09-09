@@ -11,14 +11,17 @@ const Home = () => {
     <div className="bg-primary/60 h-full">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+        <div className="text-center xl:text-left flex flex-col justify-center xl:pt-40 h-full container mx-auto">
+          
           {/* circular avatar above name */}
-          <div className="mx-auto mb-6 mt-8 w-32 h-32 sm:w-40 sm:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-accent">
-            <img
-              src="/azmain-mobile.png"
-              alt="Azmain Iqtidar Arnob"
-              className="w-full h-full object-cover"
-            />
+          <div className="flex justify-center xl:justify-start mb-4 xl:mb-6">
+            <div className="w-36 h-36 sm:w-40 sm:h-40 xl:w-44 xl:h-44 rounded-full overflow-hidden border-2 border-accent xl:-translate-x-6">
+              <img
+                src="/azmain-mobile.png"
+                alt="Azmain Iqtidar Arnob"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
           {/* title */}
@@ -49,7 +52,7 @@ const Home = () => {
             <strong>ML, AI & Smart Systems</strong>.
           </motion.p>
 
-          {/* btn */}
+          {/* Projects button (mobile only) */}
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
           </div>
@@ -65,7 +68,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* image */}
+      {/* background image, particles, and desktop side avatar */}
       <div className="w-[1280px] h-full absolute right-0 bottom-0">
         {/* bg img */}
         <div
@@ -94,6 +97,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
