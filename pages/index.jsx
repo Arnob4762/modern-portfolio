@@ -8,20 +8,22 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 min-h-screen relative">
+    <div className="bg-primary/60 h-full">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto px-4">
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 text-[2.5rem] md:text-[3rem] xl:text-[4rem]"
           >
             Hi, I'm <br />
-            <span className="text-accent">Azmain Iqtidar Arnob</span>
+            <span className="text-accent text-[2.8rem] md:text-[3.5rem] xl:text-[4.5rem]">
+              Azmain Iqtidar Arnob
+            </span>
           </motion.h1>
 
           {/* subtitle */}
@@ -53,9 +55,9 @@ const Home = () => {
         </div>
       </div>
 
-      {/* image & avatar */}
-      <div className="absolute inset-0">
-        {/* bg image */}
+      {/* image */}
+      <div className="w-[1280px] h-full absolute right-0 bottom-0">
+        {/* bg img */}
         <div
           role="img"
           className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
@@ -72,7 +74,7 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="absolute bottom-0 right-0 lg:right-[8%] w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 xl:w-[737px] xl:h-[678px] mx-auto lg:mx-0"
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-48 md:-bottom-40 lg:bottom-0 lg:right-[8%]"
         >
           <Avatar />
         </motion.div>
@@ -82,5 +84,6 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
