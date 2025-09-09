@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { BsArrowRight } from "react-icons/bs";
-
+import { BsArrowRight, BsWhatsapp, BsGithub, BsLinkedin, BsX } from "react-icons/bs";
 import { fadeIn } from "../../variants";
 import { useState } from "react";
 
@@ -25,96 +24,142 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        {/* text & form */}
-        <div className="flex flex-col w-full max-w-[700px]">
-          {/* text */}
-          <motion.h2
-            variants={fadeIn("up", 0.2)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="h2 text-center mb-12"
-          >
-            Let's <span className="text-accent">connect.</span>
-          </motion.h2>
+    <div className="h-full bg-primary/30 relative">
+      {/* Floating contact panel */}
+      <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+        <a
+          href="mailto:ornobazmain@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-floating"
+          aria-label="Email"
+        >
+          📧
+        </a>
+        <a
+          href="https://wa.me/8801645104762"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-floating"
+          aria-label="WhatsApp"
+        >
+          <BsWhatsapp />
+        </a>
+        <a
+          href="https://github.com/Arnob4762"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-floating"
+          aria-label="GitHub"
+        >
+          <BsGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/azmain-arnob7/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-floating"
+          aria-label="LinkedIn"
+        >
+          <BsLinkedin />
+        </a>
+        <a
+          href="https://x.com/Azmain_7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-floating"
+          aria-label="X"
+        >
+          <BsX />
+        </a>
+      </div>
 
-          {/* form */}
-          <motion.form
-            variants={fadeIn("up", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="flex-1 flex flex-col gap-6 w-full mx-auto"
-            onSubmit={handleSubmit}
-            autoComplete="off"
-            autoCapitalize="off"
-            // only needed for production (in netlify) to accept form input
-            data-netlify="true"
-          >
-            {/* input group */}
-            <div className="flex gap-x-6 w-full">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="input"
-                disabled={isLoading}
-                aria-disabled={isLoading}
-                required
-                aria-required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="E-mail"
-                className="input"
-                disabled={isLoading}
-                aria-disabled={isLoading}
-                required
-                aria-required
-              />
-            </div>
+      <div className="container mx-auto py-32 text-center xl:text-left flex flex-col items-center xl:items-start h-full gap-12">
+        {/* heading */}
+        <motion.h2
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="h2 text-center xl:text-left"
+        >
+          Let's <span className="text-accent">connect.</span>
+        </motion.h2>
+
+        {/* form */}
+        <motion.form
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex-1 flex flex-col gap-6 w-full max-w-[700px]"
+          onSubmit={handleSubmit}
+          autoComplete="off"
+          autoCapitalize="off"
+          data-netlify="true"
+        >
+          {/* input group */}
+          <div className="flex gap-x-6 w-full flex-col md:flex-row">
             <input
               type="text"
-              name="subject"
-              placeholder="Subject"
+              name="name"
+              placeholder="Name"
               className="input"
               disabled={isLoading}
               aria-disabled={isLoading}
               required
               aria-required
             />
-            <textarea
-              name="message"
-              placeholder="Message..."
-              className="textarea"
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              className="input"
               disabled={isLoading}
               aria-disabled={isLoading}
               required
               aria-required
             />
-            <button
-              type="submit"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
-              disabled={isLoading}
-              aria-disabled={isLoading}
-            >
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Let's talk
-              </span>
+          </div>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            className="input"
+            disabled={isLoading}
+            aria-disabled={isLoading}
+            required
+            aria-required
+          />
+          <textarea
+            name="message"
+            placeholder="Message..."
+            className="textarea"
+            disabled={isLoading}
+            aria-disabled={isLoading}
+            required
+            aria-required
+          />
+          <button
+            type="submit"
+            className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+            disabled={isLoading}
+            aria-disabled={isLoading}
+          >
+            <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+              Let's talk
+            </span>
 
-              <BsArrowRight
-                className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
-                aria-hidden
-              />
-            </button>
-          </motion.form>
-        </div>
+            <BsArrowRight
+              className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
+              aria-hidden
+            />
+          </button>
+        </motion.form>
       </div>
     </div>
   );
 };
 
 export default Contact;
+
