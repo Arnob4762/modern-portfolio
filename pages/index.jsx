@@ -11,8 +11,8 @@ const Home = () => {
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 h-full container mx-auto">
-          {/* circular avatar above name (centered always) */}
-          <div className="mx-auto mb-6 mt-8 w-32 h-32 sm:w-40 sm:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-accent xl:ml-[-2rem]">
+          {/* circular avatar above name (slightly shifted left) */}
+          <div className="mx-auto mb-6 mt-8 w-32 h-32 sm:w-40 sm:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-accent relative left-[-10px]">
             <img
               src="/azmain-mobile.png"
               alt="Azmain Iqtidar Arnob"
@@ -20,13 +20,13 @@ const Home = () => {
             />
           </div>
 
-          {/* title */}
+          {/* title (slightly shifted left) */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-center xl:ml-[-2rem]"
+            className="h1 text-center relative left-[-10px]"
           >
             <span className="text-[1.5rem] sm:text-[1.75rem] xl:text-[2rem] block">
               Hi, I'm
@@ -36,13 +36,13 @@ const Home = () => {
             </span>
           </motion.h1>
 
-          {/* subtitle */}
+          {/* subtitle (slightly shifted left) */}
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto mb-10 xl:mb-16 text-center xl:ml-[-2rem]"
+            className="max-w-sm xl:max-w-xl mx-auto mb-10 xl:mb-16 text-center relative left-[-10px]"
           >
             Final-year Computer Science student at North South University,
             passionate about <strong>Machine Learning</strong> and{" "}
@@ -64,14 +64,14 @@ const Home = () => {
         {/* particles */}
         <ParticlesContainer />
 
-        {/* desktop side avatar (shifted slightly right) */}
+        {/* desktop side avatar (slightly shifted right) */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[12%] hidden xl:flex"
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[6%] hidden xl:flex"
         >
           <Avatar />
         </motion.div>
@@ -81,6 +81,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
