@@ -20,7 +20,6 @@ const Home = () => {
               animate="show"
               exit="hidden"
               className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4"
-              style={{ left: "24px", position: "relative" }} // move 1.5 inch right
             >
               <img
                 src="/azmain-mobile.png"
@@ -86,6 +85,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
