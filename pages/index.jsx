@@ -20,8 +20,8 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            Hi, I'm <br />
+            <span className="text-accent">Azmain Iqtidar Arnob</span>
           </motion.h1>
 
           {/* subtitle */}
@@ -32,10 +32,9 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
+            Final-year Computer Science student at North South University,
+            passionate about <strong>Machine Learning</strong> and <strong>AI</strong>.
+            Exploring innovative solutions in <strong>ML, AI & Smart Systems</strong>.
           </motion.p>
 
           {/* btn */}
@@ -82,3 +81,4 @@ const Home = () => {
 };
 
 export default Home;
+
