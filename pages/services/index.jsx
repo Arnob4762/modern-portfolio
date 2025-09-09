@@ -5,7 +5,28 @@ import Circles from "../../components/Circles";
 import ServiceSlider from "../../components/ServiceSlider";
 import { fadeIn } from "../../variants";
 
-export const serviceData = [];
+export const serviceData = [
+  {
+    title: "Machine Learning & AI",
+    description:
+      "I develop end-to-end machine learning projects, including model building, optimization, and deployment. Experienced with Google Colab, Hugging Face, and Python-based ML workflows."
+  },
+  {
+    title: "Web Development",
+    description:
+      "I create responsive, modern web applications using React, Next.js, Tailwind CSS, and integrate APIs and AI-powered chatbots."
+  },
+  {
+    title: "IoT & Embedded Systems",
+    description:
+      "Worked on smart systems like a Soil Moisture Sensor-based Smart Irrigation System using STM32 microcontrollers."
+  },
+  {
+    title: "Academic & Research Projects",
+    description:
+      "Experienced in building innovative projects like VisionGuard (Retinal Disease Detection) and Regional Tourism Chatbot with document QA, budget calculator, and guide maps."
+  }
+];
 
 const Services = () => {
   return (
@@ -22,7 +43,7 @@ const Services = () => {
               exit="hidden"
               className="h2 xl:mt-8"
             >
-              My services <span className="text-accent">.</span>
+              My Services <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -31,8 +52,9 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              I specialize in machine learning, AI-based applications, modern
+              web development, and smart embedded systems with a focus on
+              creating practical, scalable, and research-driven solutions.
             </motion.p>
           </div>
 
@@ -54,3 +76,4 @@ const Services = () => {
 };
 
 export default Services;
+
