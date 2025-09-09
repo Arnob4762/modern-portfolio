@@ -12,8 +12,8 @@ const Home = () => {
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
-          {/* Mobile small avatar */}
-          <div className="block xl:hidden mx-auto mb-4 w-20 h-20 rounded-full overflow-hidden border-2 border-accent">
+          {/* Mobile bigger avatar above name */}
+          <div className="block xl:hidden mx-auto mb-6 mt-8 w-32 h-32 rounded-full overflow-hidden border-2 border-accent">
             <img
               src="/azmain-mobile.png"
               alt="Azmain Iqtidar Arnob"
@@ -30,7 +30,7 @@ const Home = () => {
             className="h1"
           >
             Hi, I'm <br />
-            <span className="text-accent text-[2.5rem] xl:text-[4rem]">
+            <span className="text-accent text-[2rem] sm:text-[2.5rem] xl:text-[4rem]">
               Azmain Iqtidar Arnob
             </span>
           </motion.h1>
@@ -94,6 +94,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
