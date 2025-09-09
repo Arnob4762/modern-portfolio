@@ -1,72 +1,58 @@
 import { motion } from "framer-motion";
 
 import ParticlesContainer from "../components/ParticlesContainer";
-import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
-
 import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
-      {/* text */}
+    <div className="bg-primary/60 h-full relative">
+      {/* background gradient */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center xl:text-left flex flex-col justify-center xl:pt-40 h-full container mx-auto">
-          
-          {/* circular avatar above text */}
-          <div className="flex justify-center mb-4 xl:mb-6">
-            <div className="w-36 h-36 sm:w-40 sm:h-40 xl:w-44 xl:h-44 rounded-full overflow-hidden border-2 border-accent">
-              <img
-                src="/azmain-mobile.png"
-                alt="Azmain Iqtidar Arnob"
-                className="w-full h-full object-cover"
-              />
-            </div>
+        <div className="flex flex-col justify-center xl:pt-40 h-full container mx-auto">
+
+          {/* Avatar + Text wrapper */}
+          <div className="flex flex-col items-center xl:items-start text-center xl:text-left">
+            {/* Circular Avatar */}
+            <motion.div
+              variants={fadeIn("down", 0.2)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="w-28 h-28 sm:w-32 sm:h-32 xl:w-36 xl:h-36 rounded-full overflow-hidden mb-4 xl:mb-6"
+            >
+              <Avatar />
+            </motion.div>
+
+            {/* title */}
+            <motion.h1
+              variants={fadeIn("down", 0.2)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="h1 text-2xl sm:text-3xl xl:text-5xl"
+            >
+              Hi, I'm <br />
+              <span className="text-accent">Azmain Iqtidar Arnob</span>
+            </motion.h1>
+
+            {/* subtitle */}
+            <motion.p
+              variants={fadeIn("down", 0.3)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="max-w-xs sm:max-w-sm xl:max-w-xl mt-4 xl:mt-6"
+            >
+              Final-year Computer Science student at North South University,
+              passionate about <strong>Machine Learning</strong> and <strong>AI</strong>.
+              Exploring innovative solutions in <strong>ML, AI & Smart Systems</strong>.
+            </motion.p>
           </div>
-
-          {/* title */}
-          <motion.h1
-            variants={fadeIn("down", 0.2)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="h1"
-          >
-            Hi, I'm <br />
-            <span className="text-accent text-[2rem] sm:text-[2.5rem] xl:text-[3rem]">
-              Azmain Iqtidar Arnob
-            </span>
-          </motion.h1>
-
-          {/* subtitle */}
-          <motion.p
-            variants={fadeIn("down", 0.3)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
-          >
-            Final-year Computer Science student at North South University,
-            passionate about <strong>Machine Learning</strong> and <strong>AI</strong>. Exploring innovative solutions in <strong>ML, AI & Smart Systems</strong>.
-          </motion.p>
-
-          {/* Projects button (mobile only) */}
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
-          </div>
-          <motion.div
-            variants={fadeIn("down", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden xl:flex"
-          >
-            <ProjectsBtn />
-          </motion.div>
         </div>
       </div>
 
-      {/* background image, particles, and desktop side avatar */}
+      {/* background image & particles */}
       <div className="w-[1280px] h-full absolute right-0 bottom-0">
         {/* bg img */}
         <div
@@ -77,24 +63,13 @@ const Home = () => {
 
         {/* particles */}
         <ParticlesContainer />
-
-        {/* desktop side avatar */}
-        <motion.div
-          variants={fadeIn("up", 0.5)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] hidden xl:flex"
-        >
-          <Avatar />
-        </motion.div>
       </div>
     </div>
   );
 };
 
 export default Home;
+
 
 
 
