@@ -10,9 +10,9 @@ const Home = () => {
     <div className="bg-primary/60 h-full">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center xl:text-left flex flex-col justify-center xl:pt-40 h-full container mx-auto xl:ml-12">
-          {/* circular avatar above name */}
-          <div className="mx-auto xl:mx-0 mb-6 mt-8 w-32 h-32 sm:w-40 sm:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-accent">
+        <div className="text-center flex flex-col justify-center xl:pt-40 h-full container mx-auto">
+          {/* circular avatar above name (centered always) */}
+          <div className="mx-auto mb-6 mt-8 w-32 h-32 sm:w-40 sm:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-accent">
             <img
               src="/azmain-mobile.png"
               alt="Azmain Iqtidar Arnob"
@@ -26,7 +26,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-center xl:text-left"
+            className="h1 text-center"
           >
             <span className="text-[1.5rem] sm:text-[1.75rem] xl:text-[2rem] block">
               Hi, I'm
@@ -42,7 +42,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto mb-10 xl:mb-16 text-center"
           >
             Final-year Computer Science student at North South University,
             passionate about <strong>Machine Learning</strong> and{" "}
@@ -64,7 +64,7 @@ const Home = () => {
         {/* particles */}
         <ParticlesContainer />
 
-        {/* desktop side avatar */}
+        {/* desktop side avatar (unchanged, stays right side) */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
@@ -81,6 +81,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
