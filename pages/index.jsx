@@ -8,12 +8,12 @@ import { fadeIn } from "../variants";
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full relative">
-      {/* main content container */}
+      {/* text wrapper + circular image */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="container mx-auto h-full flex flex-col xl:flex-row items-center justify-center xl:justify-between xl:pt-40">
           
-          {/* text wrapper with circular image */}
-          <div className="flex flex-col items-center xl:items-start text-center xl:text-left max-w-xl px-4">
+          {/* text + circular image wrapper */}
+          <div className="flex flex-col items-center xl:items-start text-center xl:text-left max-w-xl px-4 xl:ml-8">
             {/* circular avatar above name */}
             <div className="mb-6 mt-8 w-32 h-32 sm:w-40 sm:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-accent">
               <img
@@ -29,7 +29,7 @@ const Home = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h1"
+              className="h1 text-center xl:text-left"
             >
               <span className="text-[1.5rem] sm:text-[1.75rem] xl:text-[2rem] block">
                 Hi, I'm
@@ -45,7 +45,7 @@ const Home = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mt-4 text-center xl:text-left"
+              className="mt-4 text-center xl:text-left max-w-sm xl:max-w-xl"
             >
               Final-year Computer Science student at North South University,
               passionate about <strong>Machine Learning</strong> and{" "}
@@ -54,14 +54,14 @@ const Home = () => {
             </motion.p>
           </div>
 
-          {/* big avatar on right (desktop only) */}
+          {/* big avatar on right */}
           <motion.div
             variants={fadeIn("up", 0.5)}
             initial="hidden"
             animate="show"
             exit="hidden"
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="hidden xl:flex max-w-[737px] max-h-[678px] flex-shrink-0"
+            className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] hidden xl:flex"
           >
             <Avatar />
           </motion.div>
@@ -75,6 +75,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
